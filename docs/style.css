@@ -1,20 +1,39 @@
+html {
+  min-height: 100vh;
+  height: 100%;
+  min-height: 100%;
+
+}
+
 body {
   background-color: #a86942;
   color: #d9cdb1;
+  min-height: 100%;
+  min-height: 100vh;
 }
 
 header {
   background-color: #6d4735;
 }
 
-.container {
+footer {
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header_container {
   max-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#wrapper {
-
+.container {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:50px;
+  margin-bottom:50px;
 }
 
 .chat ul {
@@ -82,12 +101,9 @@ header {
 .chat {
   border-radius: 30px;
   padding: 20px;
-  background-image: url("resources/pia19393-main_sol3973_spirit_of_st_louis_l257atc.jpg");
 }
 
 .chat-container {
-  height: 190px;
-  overflow-y: scroll;
   padding-right: 16px;
 }
 

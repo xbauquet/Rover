@@ -7,8 +7,8 @@ var chatMessages = [{
 },
 {
   name: "ms2",
-  msg: "Here is the last repport of Rover. On sol 2171, corresponding to Sep 13 on earth.It was Sunny, the temperature went from -65 to -12 celsius with a pressure of 879 hectopascal.",
-  delay: 1000,
+  msg: "Here is the last report of Rover. On sol 2171, corresponding to Sep 13 on earth. It was Sunny, the temperature went from -65 to -12 celsius with a pressure of 879 hectopascal.",
+  delay: 2000,
   align: "left",
   withImage: true
 }
@@ -33,9 +33,11 @@ $('document').ready(function() {
     msginner = ".messageinner-" + obj.name;
     spinner = ".sp-" + obj.name;
 
-
-
-    $(".chat-message-list").append("<li class='message-" + obj.align + " " + obj.name + "' hidden><div class='sp-" + obj.name + "'><span class='spinme-" + obj.align + "'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div></span></div><div class='messageinner-" + obj.name + "' hidden><img class='w3-round-xxlarge' style='width:50px' src='resources/station.png'/><span class='message-text'>" + obj.msg + "</span></div></li>");
+    if(obj.name == "ms2") {
+      $(".chat-message-list").append("<li class='message-" + obj.align + " " + obj.name + "' hidden><div class='sp-" + obj.name + "'><span class='spinme-" + obj.align + "'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div></span></div><div class='messageinner-" + obj.name + "' hidden><img class='w3-round-xxlarge' style='width:50px; margin-right:5px' src='resources/station.png'/><span class='message-text'>" + obj.msg + "</span></div></li>");
+    } else {
+      $(".chat-message-list").append("<li class='message-" + obj.align + " " + obj.name + "' hidden><div class='sp-" + obj.name + "'><span class='spinme-" + obj.align + "'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div></span></div><div class='messageinner-" + obj.name + "' hidden><span class='message-text'>" + obj.msg + "</span></div></li>");
+    }
     $(msgname).delay(chatDelay).fadeIn();
     $(spinner).delay(chatDelay2).hide(1);
     $(msginner).delay(chatDelay3).fadeIn();
