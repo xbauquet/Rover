@@ -7,6 +7,12 @@ header {
   background-color: #6d4735;
 }
 
+.container {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #wrapper {
 
 }
@@ -76,7 +82,7 @@ header {
 .chat {
   border-radius: 30px;
   padding: 20px;
-  background: #f5f7fa;
+  background-image: url("resources/pia19393-main_sol3973_spirit_of_st_louis_l257atc.jpg");
 }
 
 .chat-container {
